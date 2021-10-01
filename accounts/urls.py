@@ -4,9 +4,9 @@ from accounts import api as v1_api
 
 
 router = routers.DefaultRouter()
-router.register(r'department', v1_api.DepartmentApi, basename='department')
-router.register(r'employee', v1_api.EmployeeDataApi, basename='employee')
-router.register(r'hr/registration', v1_api.HRRegisterApi, basename='registration')
+router.register(r'department', v1_api.DepartmentApi)
+router.register(r'employee', v1_api.EmployeeDataApi)
+router.register(r'hr/registration', v1_api.HRRegisterApi)
 
 urlpatterns = [
     path('api/v1/', include(router.urls)),
